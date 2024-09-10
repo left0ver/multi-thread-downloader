@@ -12,3 +12,7 @@
 先读取原先已下载的各个临时文件大小，前面说到可以使用`Range` 请求头指定下载的范围，
 我们只需要修改起始的偏移量，跳过已下载的那部分，写入的时候使用 RandomAccessFile 的 seek 方法移动写入的位置将其移动到未下载的部分即可，只需要把后面未下载的部分下载并写入即可，全部下载完毕再进行一个合并
 > 这个功能的实现思路不唯一，我还想到一种思路，Range请求下载的范围和正常的分片下载一样，可以使用 RandomAccessFile 的skipBytes 方法跳过写入已下载的那些部分（性能不如上面的那种）
+
+# 学习课程
+
+[动力节点多线程项目](https://www.bilibili.com/video/BV1PN4y1C7mS?p=21&spm_id_from=pageDriver&vd_source=3c93d521158d3aa4f74c71c5140ba8dc)
